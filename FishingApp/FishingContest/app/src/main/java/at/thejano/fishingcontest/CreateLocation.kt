@@ -17,6 +17,11 @@ class CreateLocation : AppCompatActivity() {
         val editName: EditText = findViewById(R.id.locationNameInput)
         val editLocation: EditText = findViewById(R.id.locationPostalAddressInput)
         val editNumberOfPlaces: EditText = findViewById(R.id.numberOfPlaces)
-        val editButtonCreateLocation: Button = findViewById(R.id.button_create_location)
+        val editButtonCreateLocation: Button = findViewById(R.id.buttonCreateLocation)
+
+        val buttonSaveLocation: Button = findViewById(R.id.buttonCreateLocation)
+        buttonSaveLocation.setOnClickListener{
+            finish()
+        }
     }
 }

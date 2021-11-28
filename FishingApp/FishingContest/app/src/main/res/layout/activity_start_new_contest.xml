@@ -40,8 +40,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Location:"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintStart_toStartOf="@+id/editContestName"
+        app:layout_constraintTop_toBottomOf="@+id/editContestName" />
 
     <Button
         android:id="@+id/button_redirect_create_location"
@@ -64,7 +64,8 @@
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Create a new contest" />
 
     <EditText
         android:id="@+id/editTextDate"
@@ -97,13 +98,23 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbarEnterNewContest" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editContestName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="Name"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintStart_toStartOf="@+id/textView9"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <Button
+        android:id="@+id/buttonSaveContest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,5 +29,10 @@ class StartNewContest : AppCompatActivity() {
         buttonCreateLocation.setOnClickListener{
             startActivity(Intent(this, CreateLocation::class.java))
         }
+
+        val buttonSaveContest: Button = findViewById(R.id.buttonSaveContest)
+        buttonSaveContest.setOnClickListener{
+            finish()
+        }
     }
 }

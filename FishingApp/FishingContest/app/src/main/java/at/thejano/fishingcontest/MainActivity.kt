@@ -1,6 +1,8 @@
 package at.thejano.fishingcontest
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import com.google.android.material.tabs.TabLayout
 import androidx.viewpager.widget.ViewPager
 import androidx.appcompat.app.AppCompatActivity
@@ -17,5 +19,13 @@ class MainActivity : AppCompatActivity() {
         viewPager.adapter = sectionsPagerAdapter
         val tabs: TabLayout = findViewById(R.id.tabs)
         tabs.setupWithViewPager(viewPager)
+
+        val buttonCreateContest: Button = findViewById(R.id.buttonCreateNewContest)
+        buttonCreateContest.setOnClickListener{
+            startActivity(Intent(this, StartNewContest::class.java))
+        }
+
+        intent = Intent(this, StartNewContest::class.java)
+        startActivity(intent)
     }
 }

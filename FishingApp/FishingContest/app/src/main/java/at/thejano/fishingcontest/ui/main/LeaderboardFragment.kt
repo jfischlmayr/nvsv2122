@@ -11,7 +11,7 @@ class LeaderboardFragment: Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_contest_history, container, false)
+        val root = inflater.inflate(R.layout.fragment_leaderboard, container, false)
         return root
     }
 }
