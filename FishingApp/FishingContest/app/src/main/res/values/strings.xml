@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FishingContest</string>
+    <string name="tab_title_contest_history">Contest History</string>
+    <string name="tab_title_leaderboard">Leaderboard</string>
+</resources>
