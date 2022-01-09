@@ -15,7 +15,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun DetailScreen(navController: NavController){
+fun ContestScreen(navController: NavController){
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
@@ -28,7 +28,7 @@ fun DetailScreen(navController: NavController){
                     }
                 }
             },
-            text = "Detail",
+            text = "Contest",
             color = Color.Green,
             fontSize = MaterialTheme.typography.h3.fontSize,
             fontWeight = FontWeight.Bold
@@ -38,6 +38,6 @@ fun DetailScreen(navController: NavController){
 
 @Preview(showBackground = true)
 @Composable
-fun DetailScreenPreview() {
-    DetailScreen(rememberNavController())
+fun ContestScreenPreview() {
+    ContestScreen(rememberNavController())
 }
