@@ -32,8 +32,12 @@ class LoginRepository {
             CoroutineScope(IO).launch {
                 val loginDetails = LoginTableModel(username, password)
 
-                dao.removeLoginDetails(username)
-                dao.InsertData(loginDetails)
+                val details = dao.getExistingLoginDetails(username)
+                if (details == null)
+                    dao.InsertData(loginDetails)
+                else
+                    details.Password = password
+                    dao.UpdateData(details!!)
             }
         }
 

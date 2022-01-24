@@ -17,7 +17,7 @@ interface DAOAccess {
     @Query("SELECT * FROM Credentials WHERE Username LIKE :username")
     fun getLoginDetails(username: String?) : LiveData<LoginTableModel>
 
-    @Query("DELETE FROM Credentials WHERE Username LIKE :username")
-    fun removeLoginDetails(username: String?)
+    @Query("SELECT * FROM Credentials WHERE Username LIKE :username")
+    fun getExistingLoginDetails(username: String?) : LoginTableModel?
 
 }
