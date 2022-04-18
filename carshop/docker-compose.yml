@@ -1,0 +1,30 @@
+version: "3.8"
+
+networks:
+    carshop-net:
+        driver: bridge
+
+volumes:
+    carshop-volume:
+    
+services:
+    database:
+        image: postgres
+        ports: 
+            - 54321:5432
+        restart: always
+        environment:
+            POSTGRES_USER: carshop
+            POSTGRES_PASSWORD: carshop
+        volumes:
+            - carshop-volume:/home/volumes
+        networks:
+            - carshop-net
+        container_name: carshop-database
+    frontend:
+        build: ./carshopfrontend
+        ports:
+            - 4201:80
+        networks:
+            - carshop-net
+        container_name: carshop-frontend

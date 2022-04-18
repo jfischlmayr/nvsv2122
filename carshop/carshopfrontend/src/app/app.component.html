@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" class="toolbar">
+  <span>Luxury Car Shop</span>
+  <span class="flexExpand"></span>
+
+  <button mat-raised-button (click)="navigateHome()">Home</button>
+      <button mat-raised-button (click)="navigateLogin()" *ngIf="currentUser == undefined">Login</button>
+
+      <div id="account-details" *ngIf="currentUser != undefined">
+        <p id="account-name">User: {{ currentUser.name }}</p>
+        <button mat-raised-button (click)="performLogout()">
+            Logout
+        </button>
+      </div>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

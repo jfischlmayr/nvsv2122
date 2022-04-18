@@ -1,0 +1,11 @@
+<div id="content-wrapper">
+  <p id="title">Available Cars</p>
+  <div id="car-wrapper">
+      <mat-card class="car-item" *ngFor="let car of cars">
+          <h1>{{ car.make.name }} {{ car.model }}</h1>
+          <p>Price: {{ car.price }} €</p>
+          <button mat-raised-button color="primary"><mat-icon>add_shopping_cart</mat-icon> Buy</button>
+          <button mat-raised-button color="basic">Reserve</button>
+      </mat-card>
+  </div>
+</div>
